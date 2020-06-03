@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Profil</title>
+</head>
+<body>
+
+<div class="resume">
+   <div class="resume_left">
+     <div class="resume_profile">
+       <img src={{freelancer.image}} alt="profile_pic">
+     </div>
+   </div>
+
+  
+  <div class="resume_right">
+
+    <div class="resume_item resume_about">
+
+  <div class="title">
+    <p class="bold">About: {{user.nom}}{{user.prenom}}</p>
+  </div>
+  <ul>
+    <li>
+      <div class="icon">
+        <i class="fas fa-mobile-alt"></i>
+      </div>
+      <div class="data">
+       numero tel{{user.tel}}
+     </div>
+    </li>
+    <li>
+     <div class="icon">
+     </div>
+     <div class="data">
+      date naissance{{user.dateN}}
+    </div>
+   </li>
+   <li>
+     <div class="icon">
+     </div>
+     <div class="data">
+      sexe{{user.genre}}
+    </div>
+   </li>
+    <li>
+      <div class="icon">
+        <i class="fas fa-envelope"></i>
+      </div>
+      <div class="data">
+        email {{user.mail}}
+      </div>
+    </li>
+  </ul>
+    </div>
+  
+
+
+
+    <div class="resume_item resume_education">
+      <div class="title">
+           <p class="bold">Gestion compte</p>
+      </div>
+      
+      <button type="submit" class="btn btn-dark" (click)="edit(freelancer.id)">Modifier</button>
+      <button type="submit" class="btn btn-danger" (click)="delete()">Delete</button>
+    </div>
+
+</div>
+</div>
+
+</body>
+</html>
